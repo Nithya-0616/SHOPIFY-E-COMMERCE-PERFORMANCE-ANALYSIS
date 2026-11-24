@@ -89,4 +89,47 @@ Identifies the leading geographical markets based on revenue contribution.
 - Sports has the highest category-level return rate at 15.2%.
 - The overall product return rate is 14.8%.
 - Monthly revenue and order trends show variations throughout the year.
-- Customer ratings are
+- Customer ratings are distributed across four rating bands, providing an overview of customer feedback patterns.
+
+## 9. Business Recommendations
+
+- Investigate the reasons behind higher return rates in categories such as Sports and Fashion.
+- Evaluate the factors contributing to Electronics' strong revenue performance.
+- Review monthly sales fluctuations to improve sales planning.
+- Strengthen strategies in high-performing geographical markets.
+- Monitor payment method preferences to improve the checkout experience.
+- Use customer rating trends to identify opportunities for product and service improvements.
+
+## 10. Project Files
+
+| File | Description |
+|---|---|
+| `SHOPIFY DATA SET.csv` | Source dataset |
+| `SHOPIFY.pbix` | Interactive Power BI project file |
+| `SHOPIFY_DASHBOARD.png` | Dashboard preview |
+
+## 11. Skills Demonstrated
+
+- Microsoft Power BI
+- Power Query
+- DAX
+- Data Cleaning and Transformation
+- Data Analysis
+- Data Modelling
+- KPI Reporting
+- Business Intelligence
+- Dashboard Development
+- Data Visualization
+- Business Insight Generation
+
+## 12. Conclusion
+
+This project demonstrates the use of Power BI to transform e-commerce sales data into an interactive business intelligence dashboard.
+
+By analysing revenue, orders, product categories, returns, geographical markets and customer ratings, the project provides a consolidated view of e-commerce performance and highlights opportunities for business improvement.
+
+---
+
+**Created by:** Nithya Sreenath
+
+[GitHub Profile](https://github.com/nithya16-sql) · [LinkedIn](https://www.linkedin.com/in/nithyasreenath/) · [Writing Portfolio](https://nithyasreenath.blogspot.com/)
