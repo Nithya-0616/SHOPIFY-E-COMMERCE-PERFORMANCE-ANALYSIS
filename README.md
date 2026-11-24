@@ -116,13 +116,6 @@ DIVIDE(
 ```
 Calculates the proportion of returned orders relative to total orders. Formatted as a percentage in Power BI.
 
-### 7. Total Profit
-
-```dax
-Total Profit =
-SUM('SHOPIFY DATA SET'[profit])
-```
-Calculates the total profit recorded across transactions.
 
 ### 8. Top Category
 
