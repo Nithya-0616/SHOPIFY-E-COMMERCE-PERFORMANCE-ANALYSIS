@@ -61,6 +61,92 @@ The dataset supports analysis across:
 | Average Order Value | 994.10 |
 | Top Category | Electronics |
 
+## DAX Measures
+
+The following DAX measures were created to calculate key business performance indicators and support the dashboard visualisations.
+
+### 1. Total Revenue
+
+```dax
+Total Revenue = SUM('SHOPIFY DATA SET'[revenue])
+```
+Calculates the total revenue generated across all transactions.
+
+### 2. Total Orders
+
+```dax
+Total Orders = DISTINCTCOUNT('SHOPIFY DATA SET'[order_id])
+```
+Calculates the total number of unique orders.
+
+### 3. Total Quantity Sold
+
+```dax
+Total Quantity Sold = SUM('SHOPIFY DATA SET'[quantity])
+```
+Calculates the total quantity of products sold.
+
+### 4. Average Order Value (AOV)
+
+```dax
+Average Order Value =
+DIVIDE([Total Revenue], [Total Orders])
+```
+Measures the average revenue generated per order.
+
+### 5. Returned Orders
+
+```dax
+Returned Orders =
+CALCULATE(
+    [Total Orders],
+    'SHOPIFY DATA SET'[is_returned] = 1
+)
+```
+Counts the distinct orders marked as returned.
+
+### 6. Return Rate %
+
+```dax
+Return Rate % =
+DIVIDE(
+    [Returned Orders],
+    [Total Orders]
+)
+```
+Calculates the proportion of returned orders relative to total orders. Formatted as a percentage in Power BI.
+
+### 7. Total Profit
+
+```dax
+Total Profit =
+SUM('SHOPIFY DATA SET'[profit])
+```
+Calculates the total profit recorded across transactions.
+
+### 8. Top Category
+
+```dax
+Top Category =
+VAR TopCat =
+    TOPN(
+        1,
+        VALUES('SHOPIFY DATA SET'[product_category]),
+        [Total Revenue],
+        DESC
+    )
+RETURN
+    MAXX(
+        TopCat,
+        'SHOPIFY DATA SET'[product_category]
+    )
+```
+Identifies the product category with the highest revenue.
+
+### Summary
+
+These measures support revenue tracking, order analysis, product performance evaluation, profitability analysis and return-rate monitoring. They also enable the dashboard to respond dynamically to the selected filters and slicers.
+
 ## 7. Dashboard Components
 
 ### 7.1 Monthly Revenue and Orders
